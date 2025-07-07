@@ -11,12 +11,12 @@
         android:id="@+id/studentSpiner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="40dp"
-        android:entries="@array/studentsArray"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="120dp"
         android:dropDownSelector="@android:color/background_dark"
-        app:layout_constraintBottom_toTopOf="@+id/citiesList"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:entries="@array/studentsArray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/citiesList"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/helloText" />
 
@@ -24,44 +24,27 @@
         android:id="@+id/citiesList"
         android:layout_width="327dp"
         android:layout_height="357dp"
-        android:layout_marginTop="130dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="40dp"
         android:padding="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/studentSpiner" />
-
-    <com.google.android.material.button.MaterialButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Login"
-        app:layout_constraintBottom_toTopOf="@+id/helloText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
     <TextView
         android:id="@+id/helloText"
         android:layout_width="218dp"
         android:layout_height="47dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="83dp"
+        android:layout_marginBottom="40dp"
         android:text="Hii"
-        android:textColor="@color/blue"
         android:textAlignment="center"
+        android:textColor="@color/blue"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/studentSpiner"
+        app:layout_constraintEnd_toStartOf="@+id/citiesList"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <include
-        layout="@layout/trademark"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
