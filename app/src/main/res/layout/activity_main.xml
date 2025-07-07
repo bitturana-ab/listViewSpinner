@@ -11,13 +11,14 @@
         android:id="@+id/studentSpiner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="40dp"
         android:layout_marginBottom="40dp"
+        android:entries="@array/studentsArray"
         android:dropDownSelector="@android:color/background_dark"
         app:layout_constraintBottom_toTopOf="@+id/citiesList"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/helloText" />
 
     <ListView
         android:id="@+id/citiesList"
@@ -30,5 +31,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/studentSpiner" />
+
+    <TextView
+        android:id="@+id/helloText"
+        android:layout_width="218dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="80dp"
+        android:text="Hii"
+        android:textColor="@color/blue"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">listView</string>
+    <string name="hello">Welcome AB</string>
+    <string-array name="studentsArray">
+        <item>Ans</item>
+        <item>Bi2</item>
+        <item>san</item>
+        <item>jay</item>
+        <item>bittu</item>
+        <item>ab</item>
+        <item>sanjay</item>
+    </string-array>
 </resources>

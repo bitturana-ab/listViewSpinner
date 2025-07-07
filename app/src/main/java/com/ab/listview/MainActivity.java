@@ -6,6 +6,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ListView citiesList;
     private Spinner studentSpiner;
+    private TextView helloText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,25 +33,41 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
+        helloText = findViewById(R.id.helloText);
+        helloText.setText(getString(R.string.hello));
+
         studentSpiner = findViewById(R.id.studentSpiner);
 
-        ArrayList<String> students = new ArrayList<>();
-        students.add("Ans");
-        students.add("Bittu");
-        students.add("AB");
-        students.add("Sanjay");
+//        ArrayList<String> students = new ArrayList<>();
+//        students.add("Ans");
+//        students.add("Bittu");
+//        students.add("AB");
+//        students.add("Sanjay");
+//
+//        ArrayAdapter<String> studentAdapter = new ArrayAdapter<>(
+//                this,
+//                android.R.layout.simple_spinner_dropdown_item,
+//                students
+//        );
 
-        ArrayAdapter<String> studentAdapter = new ArrayAdapter<>(
-                this,
-                android.R.layout.simple_spinner_dropdown_item,
-                students
-        );
+//        studentSpiner.setAdapter();
+//        studentSpiner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+//            @Override
+//            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+//                Toast.makeText(MainActivity.this, students.get(position)+" Selected", Toast.LENGTH_SHORT).show();
+//            }
+//
+//            @Override
+//            public void onNothingSelected(AdapterView<?> parent) {
+//
+//            }
+//        });
 
-        studentSpiner.setAdapter(studentAdapter);
+//        this students list will came from String.xml stringArray (studentsArray)
         studentSpiner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(MainActivity.this, students.get(position)+" Selected", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, studentSpiner.getSelectedItem().toString()+" selected", Toast.LENGTH_SHORT).show();
             }
 
             @Override
