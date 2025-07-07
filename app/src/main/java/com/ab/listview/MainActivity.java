@@ -1,6 +1,8 @@
 package com.ab.listview;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -80,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<String> cities = new ArrayList<>();
         cities.add("Ranchi");
         cities.add("Hazaribag");
+        cities.add("Giridih");
         cities.add("Suriya");
         cities.add("Chennai");
 
@@ -96,5 +99,15 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, cities.get(position)+" Selected", Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+//    for menu add to mainaActivity
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_menu,menu);
+        return true;
     }
 }
